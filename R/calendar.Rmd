@@ -1,0 +1,25 @@
+---
+title: "Calendars in JD+ 3.0"
+output: html_notebook
+---
+
+## Generic calendar
+
+### Number of days by period
+
+In its computation of trading days regressors, JD+ first computes the number of days for each period.
+
+The different periods can be defined by grouping the days 
+
+#### All days separately
+
+```{r}
+rjd3modelling::td(12, c(2022,1), 24, contrasts = F)
+
+```
+#### Week days, Saturdays and Sundays
+
+```{r}
+rjd3modelling::td(12, c(2022,1), 24, groups=c(1,1,1,1,1,2,0), contrasts = F)
+
+```

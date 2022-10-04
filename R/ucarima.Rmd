@@ -1,0 +1,53 @@
+---
+title: "Canonical decomposition of a Sarima model"
+
+output: html_notebook
+
+params:
+  theta: -.2
+  btheta: -.8
+---
+
+### Definition of the model
+
+Traditional monthly airline model
+
+$$ (1-B)(1-B^s)y_t=(1-\theta B)(1-\theta_s B^s)\epsilon_t $$
+
+```{r}
+library(rjd3arima)
+model<-rjd3modelling::sarima.model(d=1, bd=1, theta=params$theta, btheta=params$btheta, period=12)
+print(model)
+```
+
+### Canonical decomposition (trend-seasonal-irregular)
+
+```{r}
+ucm<-rjd3modelling::sarima.decompose(model)
+print(ucm)
+
+```
+### Components / Estimators
+
+#### Trend component
+
+```{r}
+res<-601
+st<-rjd3modelling::arima.properties(ucm$components[[1]], nspectrum = res)$spectrum
+wkt<-rjd3modelling::ucarima.wk(ucm, 1, nspectrum = res)
+plot(st, type='l', col='blue', ylim=c(0,0.5))
+grid()
+lines(wkt$spectrum)
+
+```
+#### Irregular component
+
+```{r}
+res<-601
+si<-rjd3modelling::arima.properties(ucm$components[[3]], nspectrum = res)$spectrum
+wki<-rjd3modelling::ucarima.wk(ucm, 3, nspectrum = res)
+plot(si, type='l', col='blue', ylim=c(0,0.1))
+grid()
+lines(wki$spectrum)
+
+```
