@@ -23,3 +23,22 @@ rjd3modelling::td(12, c(2022,1), 24, contrasts = F)
 rjd3modelling::td(12, c(2022,1), 24, groups=c(1,1,1,1,1,2,0), contrasts = F)
 
 ```
+Actual regression variables are then computed by contrasts (against $group_0$)
+
+#### All days separately
+
+
+```{r}
+rjd3modelling::td(12, c(2022,1), 24, contrasts = T)
+
+```
+#### Week days, Saturdays and Sundays
+
+To be noted that the contrasting group is weighted to be comparable to any other group:
+
+$$ td_i = group_i - group_O \times \frac{\# group_i}{\# group_o}  $$
+
+```{r}
+rjd3modelling::td(12, c(2022,1), 24, groups=c(1,1,1,1,1,2,0), contrasts = T)
+
+```

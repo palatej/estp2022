@@ -1847,11 +1847,91 @@ Nov 2023       4      22       4
 Dec 2023       5      21       5</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Actual regression variables are then computed by contrasts (against
+<span class="math inline">\(group_0\)</span>)</p>
+</div>
+<div id="all-days-separately-1" class="section level4">
+<h4>All days separately</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmpkM21vZGVsbGluZzo6dGQoMTIsIGMoMjAyMiwxKSwgMjQsIGNvbnRyYXN0cyA9IFQpXG5gYGAifQ== -->
+<pre class="r"><code>rjd3modelling::td(12, c(2022,1), 24, contrasts = T)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgZ3JvdXAtMSBncm91cC0yIGdyb3VwLTMgZ3JvdXAtNCBncm91cC01IGdyb3VwLTZcbkphbiAyMDIyICAgICAgIDAgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgICAwXG5GZWIgMjAyMiAgICAgICAwICAgICAgIDAgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMFxuTWFyIDIwMjIgICAgICAgMCAgICAgICAxICAgICAgIDEgICAgICAgMSAgICAgICAwICAgICAgIDBcbkFwciAyMDIyICAgICAgIDAgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMSAgICAgICAxXG5NYXkgMjAyMiAgICAgICAwICAgICAgIDAgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMVxuSnVuIDIwMjIgICAgICAgMCAgICAgICAwICAgICAgIDEgICAgICAgMSAgICAgICAwICAgICAgIDBcbkp1bCAyMDIyICAgICAgLTEgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAgMCAgICAgICAwXG5BdWcgMjAyMiAgICAgICAxICAgICAgIDEgICAgICAgMSAgICAgICAwICAgICAgIDAgICAgICAgMFxuU2VwIDIwMjIgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMSAgICAgICAxICAgICAgIDBcbk9jdCAyMDIyICAgICAgIDAgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgICAwXG5Ob3YgMjAyMiAgICAgICAwICAgICAgIDEgICAgICAgMSAgICAgICAwICAgICAgIDAgICAgICAgMFxuRGVjIDIwMjIgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMSAgICAgICAxICAgICAgIDFcbkphbiAyMDIzICAgICAgIDAgICAgICAgMCAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgIC0xXG5GZWIgMjAyMyAgICAgICAwICAgICAgIDAgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMFxuTWFyIDIwMjMgICAgICAgMCAgICAgICAwICAgICAgIDEgICAgICAgMSAgICAgICAxICAgICAgIDBcbkFwciAyMDIzICAgICAgLTEgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgICAwXG5NYXkgMjAyMyAgICAgICAxICAgICAgIDEgICAgICAgMSAgICAgICAwICAgICAgIDAgICAgICAgMFxuSnVuIDIwMjMgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMSAgICAgICAxICAgICAgIDBcbkp1bCAyMDIzICAgICAgIDAgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgICAwXG5BdWcgMjAyMyAgICAgICAwICAgICAgIDEgICAgICAgMSAgICAgICAxICAgICAgIDAgICAgICAgMFxuU2VwIDIwMjMgICAgICAgMCAgICAgICAwICAgICAgIDAgICAgICAgMCAgICAgICAxICAgICAgIDFcbk9jdCAyMDIzICAgICAgIDAgICAgICAgMCAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgIC0xXG5Ob3YgMjAyMyAgICAgICAwICAgICAgIDAgICAgICAgMSAgICAgICAxICAgICAgIDAgICAgICAgMFxuRGVjIDIwMjMgICAgICAtMSAgICAgIC0xICAgICAgLTEgICAgICAtMSAgICAgICAwICAgICAgIDBcbiJ9 -->
+<pre><code>         group-1 group-2 group-3 group-4 group-5 group-6
+Jan 2022       0      -1      -1      -1      -1       0
+Feb 2022       0       0       0       0       0       0
+Mar 2022       0       1       1       1       0       0
+Apr 2022       0       0       0       0       1       1
+May 2022       0       0      -1      -1      -1      -1
+Jun 2022       0       0       1       1       0       0
+Jul 2022      -1      -1      -1      -1       0       0
+Aug 2022       1       1       1       0       0       0
+Sep 2022       0       0       0       1       1       0
+Oct 2022       0      -1      -1      -1      -1       0
+Nov 2022       0       1       1       0       0       0
+Dec 2022       0       0       0       1       1       1
+Jan 2023       0       0      -1      -1      -1      -1
+Feb 2023       0       0       0       0       0       0
+Mar 2023       0       0       1       1       1       0
+Apr 2023      -1      -1      -1      -1      -1       0
+May 2023       1       1       1       0       0       0
+Jun 2023       0       0       0       1       1       0
+Jul 2023       0      -1      -1      -1      -1       0
+Aug 2023       0       1       1       1       0       0
+Sep 2023       0       0       0       0       1       1
+Oct 2023       0       0      -1      -1      -1      -1
+Nov 2023       0       0       1       1       0       0
+Dec 2023      -1      -1      -1      -1       0       0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="week-days-saturdays-and-sundays-1" class="section level4">
+<h4>Week days, Saturdays and Sundays</h4>
+<p>To be noted that the contrasting group is weighted to be comparable
+to any other group:</p>
+<p><span class="math display">\[ td_i = group_i - group_O \times
+\frac{\# group_i}{\# group_o}  \]</span></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmpkM21vZGVsbGluZzo6dGQoMTIsIGMoMjAyMiwxKSwgMjQsIGdyb3Vwcz1jKDEsMSwxLDEsMSwyLDApLCBjb250cmFzdHMgPSBUKVxuYGBgIn0= -->
+<pre class="r"><code>rjd3modelling::td(12, c(2022,1), 24, groups=c(1,1,1,1,1,2,0), contrasts = T)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgZ3JvdXAtMSBncm91cC0yXG5KYW4gMjAyMiAgICAgIC00ICAgICAgIDBcbkZlYiAyMDIyICAgICAgIDAgICAgICAgMFxuTWFyIDIwMjIgICAgICAgMyAgICAgICAwXG5BcHIgMjAyMiAgICAgICAxICAgICAgIDFcbk1heSAyMDIyICAgICAgLTMgICAgICAtMVxuSnVuIDIwMjIgICAgICAgMiAgICAgICAwXG5KdWwgMjAyMiAgICAgIC00ICAgICAgIDBcbkF1ZyAyMDIyICAgICAgIDMgICAgICAgMFxuU2VwIDIwMjIgICAgICAgMiAgICAgICAwXG5PY3QgMjAyMiAgICAgIC00ICAgICAgIDBcbk5vdiAyMDIyICAgICAgIDIgICAgICAgMFxuRGVjIDIwMjIgICAgICAgMiAgICAgICAxXG5KYW4gMjAyMyAgICAgIC0zICAgICAgLTFcbkZlYiAyMDIzICAgICAgIDAgICAgICAgMFxuTWFyIDIwMjMgICAgICAgMyAgICAgICAwXG5BcHIgMjAyMyAgICAgIC01ICAgICAgIDBcbk1heSAyMDIzICAgICAgIDMgICAgICAgMFxuSnVuIDIwMjMgICAgICAgMiAgICAgICAwXG5KdWwgMjAyMyAgICAgIC00ICAgICAgIDBcbkF1ZyAyMDIzICAgICAgIDMgICAgICAgMFxuU2VwIDIwMjMgICAgICAgMSAgICAgICAxXG5PY3QgMjAyMyAgICAgIC0zICAgICAgLTFcbk5vdiAyMDIzICAgICAgIDIgICAgICAgMFxuRGVjIDIwMjMgICAgICAtNCAgICAgICAwXG4ifQ== -->
+<pre><code>         group-1 group-2
+Jan 2022      -4       0
+Feb 2022       0       0
+Mar 2022       3       0
+Apr 2022       1       1
+May 2022      -3      -1
+Jun 2022       2       0
+Jul 2022      -4       0
+Aug 2022       3       0
+Sep 2022       2       0
+Oct 2022      -4       0
+Nov 2022       2       0
+Dec 2022       2       1
+Jan 2023      -3      -1
+Feb 2023       0       0
+Mar 2023       3       0
+Apr 2023      -5       0
+May 2023       3       0
+Jun 2023       2       0
+Jul 2023      -4       0
+Aug 2023       3       0
+Sep 2023       1       1
+Oct 2023      -3      -1
+Nov 2023       2       0
+Dec 2023      -4       0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNhbGVuZGFycyBpbiBKRCsgMy4wIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgR2VuZXJpYyBjYWxlbmRhcg0KDQojIyMgTnVtYmVyIG9mIGRheXMgYnkgcGVyaW9kDQoNCkluIGl0cyBjb21wdXRhdGlvbiBvZiB0cmFkaW5nIGRheXMgcmVncmVzc29ycywgSkQrIGZpcnN0IGNvbXB1dGVzIHRoZSBudW1iZXIgb2YgZGF5cyBmb3IgZWFjaCBwZXJpb2QuDQoNClRoZSBkaWZmZXJlbnQgcGVyaW9kcyBjYW4gYmUgZGVmaW5lZCBieSBncm91cGluZyB0aGUgZGF5cyANCg0KIyMjIyBBbGwgZGF5cyBzZXBhcmF0ZWx5DQoNCmBgYHtyfQ0KcmpkM21vZGVsbGluZzo6dGQoMTIsIGMoMjAyMiwxKSwgMjQsIGNvbnRyYXN0cyA9IEYpDQoNCmBgYA0KIyMjIyBXZWVrIGRheXMsIFNhdHVyZGF5cyBhbmQgU3VuZGF5cw0KDQpgYGB7cn0NCnJqZDNtb2RlbGxpbmc6OnRkKDEyLCBjKDIwMjIsMSksIDI0LCBncm91cHM9YygxLDEsMSwxLDEsMiwwKSwgY29udHJhc3RzID0gRikNCg0KYGBgDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNhbGVuZGFycyBpbiBKRCsgMy4wIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgR2VuZXJpYyBjYWxlbmRhcg0KDQojIyMgTnVtYmVyIG9mIGRheXMgYnkgcGVyaW9kDQoNCkluIGl0cyBjb21wdXRhdGlvbiBvZiB0cmFkaW5nIGRheXMgcmVncmVzc29ycywgSkQrIGZpcnN0IGNvbXB1dGVzIHRoZSBudW1iZXIgb2YgZGF5cyBmb3IgZWFjaCBwZXJpb2QuDQoNClRoZSBkaWZmZXJlbnQgcGVyaW9kcyBjYW4gYmUgZGVmaW5lZCBieSBncm91cGluZyB0aGUgZGF5cyANCg0KIyMjIyBBbGwgZGF5cyBzZXBhcmF0ZWx5DQoNCmBgYHtyfQ0KcmpkM21vZGVsbGluZzo6dGQoMTIsIGMoMjAyMiwxKSwgMjQsIGNvbnRyYXN0cyA9IEYpDQoNCmBgYA0KIyMjIyBXZWVrIGRheXMsIFNhdHVyZGF5cyBhbmQgU3VuZGF5cw0KDQpgYGB7cn0NCnJqZDNtb2RlbGxpbmc6OnRkKDEyLCBjKDIwMjIsMSksIDI0LCBncm91cHM9YygxLDEsMSwxLDEsMiwwKSwgY29udHJhc3RzID0gRikNCg0KYGBgDQpBY3R1YWwgcmVncmVzc2lvbiB2YXJpYWJsZXMgYXJlIHRoZW4gY29tcHV0ZWQgYnkgY29udHJhc3RzIChhZ2FpbnN0ICRncm91cF8wJCkNCg0KIyMjIyBBbGwgZGF5cyBzZXBhcmF0ZWx5DQoNCg0KYGBge3J9DQpyamQzbW9kZWxsaW5nOjp0ZCgxMiwgYygyMDIyLDEpLCAyNCwgY29udHJhc3RzID0gVCkNCg0KYGBgDQojIyMjIFdlZWsgZGF5cywgU2F0dXJkYXlzIGFuZCBTdW5kYXlzDQoNClRvIGJlIG5vdGVkIHRoYXQgdGhlIGNvbnRyYXN0aW5nIGdyb3VwIGlzIHdlaWdodGVkIHRvIGJlIGNvbXBhcmFibGUgdG8gYW55IG90aGVyIGdyb3VwOg0KDQokJCB0ZF9pID0gZ3JvdXBfaSAtIGdyb3VwX08gXHRpbWVzIFxmcmFje1wjIGdyb3VwX2l9e1wjIGdyb3VwX299ICAkJA0KDQpgYGB7cn0NCnJqZDNtb2RlbGxpbmc6OnRkKDEyLCBjKDIwMjIsMSksIDI0LCBncm91cHM9YygxLDEsMSwxLDEsMiwwKSwgY29udHJhc3RzID0gVCkNCg0KYGBg</div>
 
 
 
