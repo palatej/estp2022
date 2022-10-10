@@ -1,23 +1,19 @@
  # Lecture des données
 
  library(readxl)
- path="./Data"
- pib<- read_excel(paste(path, "Data4ESTP.xlsx", sep='/'),sheet=1)
- head(pib[22:26 , 1:9])
-
- # Transformation des données en séries temporelles
-
- c<-ncol(pib)
- pib<-ts(pib[, 2:c],start=c(1990,1),frequency=4)
- plot(pib[,"FR"])
- pibFR=pib[,"FR"]
- pibEZ99=pib[,c("AT","BE","FI","FR","DE","IE","IT","LU","NL","PT","ES")]
-
-
- ipi<- read_excel(paste(path, "Data4ESTP.xlsx", sep='/'),sheet=4)
- head(ipi[22:26 , 1:9])
- c<-ncol(ipi)
- n<-colnames(ipi)
- ipi<-lapply(2:c, function(z){ts(ipi[, z],start=c(1995,1),frequency=12)})
- names(ipi)<-n[-1]
  
+ tsexcel<-function(file, frequency, start, path=NULL, sheet=1){
+ 
+   if(! is.null(path))
+     file=paste(path, file, sep='/')
+   data<-read_excel(file,sheet=sheet)
+   c<-ncol(data)
+   n<-colnames(data)
+   data<-lapply(2:c, function(z){ts(data[, z],start=start,frequency=frequency)})
+   names(data)<-n[-1]
+   
+   return (data)
+ }
+ 
+ pib<- tsexcel("Data4ESTP.xlsx", 4, c(1990,1), path='./Data', sheet=1)
+ ipi<- tsexcel("Data4ESTP.xlsx", 12, c(1995,1), path='./Data', sheet=4)
