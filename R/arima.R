@@ -2,10 +2,10 @@
 par(mfrow=c(1,2))
 
 #model1<-rjd3modelling::sarima.model(period=1)
-model1<-rjd3modelling::sarima.model(d=0, theta=0.9, period=1)
+model1<-rjd3modelling::sarima.model(d=1, theta=-0.4, bd=1, btheta= -.5, period=12)
 #model1<-rjd3modelling::sarima.model(d=0, theta=-0.8, period=1)
 #model1<-rjd3modelling::sarima.model(d=0, phi=0.8, period=1)
-#model1<-rjd3modelling::sarima.model(d=0, phi=-0.8, period=1)
+#model1<-rjd3modelling::sarima.model(d=0, phi=0.8, period=1)
 #model1<-rjd3modelling::sarima.model(bd=1, btheta=0.8, period=12)
 #model1<-rjd3modelling::sarima.model(bd=1, btheta=-0.8, period=12)
 #model1<-rjd3modelling::sarima.model(bd=1, bphi=-0.8, period=12)
