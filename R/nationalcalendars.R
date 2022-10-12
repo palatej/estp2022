@@ -1,5 +1,6 @@
 suppressPackageStartupMessages(library(RJDemetra))
 suppressPackageStartupMessages(library(RJDemetra3))
+suppressPackageStartupMessages(library(rjd3modelling))
 
 cal<-calendar.new()
 calendar.holiday(cal, "NEWYEAR")
@@ -9,7 +10,7 @@ calendar.holiday(cal, "ASCENSION")
 calendar.holiday(cal, "WHITMONDAY")
 calendar.fixedday(cal, 7, 21)
 calendar.holiday(cal, "ASSUMPTION")
-calendar.holiday(cal, "ALLSAINTDAY")
+calendar.holiday(cal, "ALLSAINTSDAY")
 calendar.holiday(cal, "ARMISTICE")
 calendar.holiday(cal, "CHRISTMAS")
 
