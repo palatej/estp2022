@@ -4,7 +4,7 @@ airline<-function(period, th, bth){
 }
 
 res<-3000
-model<-airline(12, .4, -.6)
+model<-airline(12, -.4, -.7)
 ucm<-rjd3modelling::sarima.decompose(model)
 
 #plots the spectrum of the components

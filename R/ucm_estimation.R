@@ -3,7 +3,7 @@ airline<-function(period, th, bth){
   return (model)
 }
 
-model<-airline(12, -.5, -.95)
+model<-airline(12, -.4, -.8)
 ucm<-rjd3modelling::sarima.decompose(model)
 
 y<-rjd3toolkit::retail$ShoeStores

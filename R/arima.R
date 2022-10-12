@@ -1,8 +1,8 @@
 #creates an Sarima model
-par(mfrow=c(2,2))
+par(mfrow=c(1,2))
 
-model1<-rjd3modelling::sarima.model(period=1)
-#model1<-rjd3modelling::sarima.model(d=0, theta=0.8, period=1)
+#model1<-rjd3modelling::sarima.model(period=1)
+model1<-rjd3modelling::sarima.model(d=0, theta=0.9, period=1)
 #model1<-rjd3modelling::sarima.model(d=0, theta=-0.8, period=1)
 #model1<-rjd3modelling::sarima.model(d=0, phi=0.8, period=1)
 #model1<-rjd3modelling::sarima.model(d=0, phi=-0.8, period=1)
@@ -35,7 +35,7 @@ model1<-rjd3modelling::sarima.model(period=1)
 # max at acos(-(1+p2)/(4*p2)*p1)
 
 
-model2<-rjd3modelling::sarima.model(d=1, period=1)
+#model2<-rjd3modelling::sarima.model(d=1, period=1)
 #model2<-rjd3modelling::sarima.model(d=1, theta=0.8, period=1)
 #model2<-rjd3modelling::sarima.model(d=1, theta=-0.8, period=1)
 #model2<-rjd3modelling::sarima.model(d=1, phi=0.8, period=1)
@@ -43,7 +43,7 @@ model2<-rjd3modelling::sarima.model(d=1, period=1)
 #model2<-rjd3modelling::sarima.model(d=1, bd=1, theta=0.8, period=12)
 #model2<-rjd3modelling::sarima.model(d=1, bd=1, theta=-0.8, period=12)
 #model2<-rjd3modelling::sarima.model(d=1, bd=1, phi=0.8, period=12)
-#model2<-rjd3modelling::sarima.model(d=1, bd=1, theta=-0.8, btheta=-.6, period=12)
+#model2<-rjd3modelling::sarima.model(d=1, bd=1, theta=-0.8, btheta=-0.2, period=12)
 # frequency of the cycle:
 
 # generates and plots a random Sarima model (non seasonal)
@@ -61,24 +61,24 @@ lines(rndn, col='blue')
 
 # generates and plots a random Sarima model (non seasonal)
 
-rndt<- rjd3modelling::sarima.random(model2, 300, tdegree=3)
-rndn<- rjd3modelling::sarima.random(model2, 300)
+#rndt<- rjd3modelling::sarima.random(model2, 300, tdegree=3)
+#rndn<- rjd3modelling::sarima.random(model2, 300)
 
-M<-max(c(rndt, rndn))
-m<-min(c(rndt, rndn))
+#M<-max(c(rndt, rndn))
+#m<-min(c(rndt, rndn))
 
-plot(rndt, type='l', col='gray', ylim=c(m,M))
-lines(rndn, col='blue')
+#plot(rndt, type='l', col='gray', ylim=c(m,M))
+#lines(rndn, col='blue')
 
 
 # pseudo-spectrum of the models
 
 p1<-rjd3modelling::sarima.properties(model1)
-p2<-rjd3modelling::sarima.properties(model2)
+#p2<-rjd3modelling::sarima.properties(model2)
 
-plot(p1$spectrum, type='l', col='green', ylim=c(-0.5,10))
+plot(p1$spectrum, type='l', col='magenta', ylim=c(-0.5,5))
 grid()
-plot(p2$spectrum, type='l', col='green', ylim=c(-0.5,5))
-grid()
+#plot(p2$spectrum, type='l', col='green', ylim=c(-0.5, 3))
+#grid()
 
 par(mfrow=c(1,1))
