@@ -4,6 +4,11 @@
 Paper on R Tools for JDemetra+
 https://www.insee.fr/fr/statistiques/5019786
 
+Link to JDemetra+ current documentation 
+https://jdemetradocumentation.github.io/JDemetra-documentation/
+
+(a new page is under contruction, we'll keep you updated !)
+
 
 
 
